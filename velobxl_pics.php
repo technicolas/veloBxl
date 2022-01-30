@@ -2,66 +2,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Vélos Bxl (avec images)</title>
-        <style>
-			body {
-				font: 15px Courier, sans-serif;
-			}
-
-            p {
-                color: blue;
-				font-size: 18px;
-            }
-
-			table {
-				border: solid;
-				border-collapse: collapse;
-				background-color: #A6F7EF;
-				padding: 10px 0px 10px 0px;
-			}
-			
-			caption {
-				text-decoration: underline overline #FF3028;
-                color: black;
-				font-size: 24px;
-				padding: 1px 1px 20px 1px;
-            }
-
-			.center {
-				margin-left: auto;
-				margin-right: auto;
-			}
-
-			tr, td, th{
-				border: 1px solid green;
-				text-align: right;
-			}
-
-			th {
-				text-align: left;
-			}
-
-			.lignesDatas:hover {
-				background-color: #E2B10E;
-			}
-
-			.under{
-				text-decoration: underline #2487F7;
-				font-size: 18px;
-				background-color: yellow;
-			}
-
-			.grandTotal{
-				text-decoration: underline #FF3028;
-                color: black;
-				font-size: 20px;
-				font-weight: bold;
-			}
-
-			.date {
-				text-decoration: blink;
-			}
-
-        </style>
+		<link rel="stylesheet" type="text/css" href="velobxl.css" />
 	</head>
 	<body>
 		<a href="<?php $_SERVER['PHP_SELF']; ?>">Actualiser la page</a>
@@ -107,13 +48,14 @@
 					echo "<td>"; echo ($capteur[$i]->{'properties'}->{"day_cnt"}); echo "</td>";
 					echo "<td>"; echo ($capteur[$i]->{'properties'}->{"year_cnt"}); echo "</td>";
 					$nbrBikesYearTot = $nbrBikesYearTot + ($capteur[$i]->{'properties'}->{"year_cnt"});
-					echo "<td><img src=\""; echo ($capteur[$i]->{'properties'}->{"pic_a"}); echo "\" height=\"150\" alt=\"Image A\"/></td>";
-					echo "<td><img src=\""; echo ($capteur[$i]->{'properties'}->{"pic_b"}); echo "\" height=\"150\" alt=\"Image B\"/></td>";
+					echo "<td class=\"images\"><img src=\""; echo ($capteur[$i]->{'properties'}->{"pic_a"}); echo "\" height=\"150\" alt=\"---\"/></td>";
+					echo "<td class=\"images\"><img src=\""; echo ($capteur[$i]->{'properties'}->{"pic_b"}); echo "\" height=\"150\" alt=\"---\"/></td>";
 				echo '</tr>';
 			}
 			echo '</table>';
 			echo "<p class=\"grandTotal\">Grand total annuel: $nbrBikesYearTot";
 		?>
 	</body>
-	<footer>&copy Nicolas - 2022</footer>
+
+	<footer>&copy Nicolas - <?php echo date("Y"); ?> </footer>
 </html>
