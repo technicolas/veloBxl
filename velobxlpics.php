@@ -23,7 +23,7 @@
 			echo '<table border="1" width="95%" class="center">';
 				echo '<caption>Fréquentation des vélos à Bruxelles: </caption>';
 				echo "<br>";
-					echo '<tr class="under">';
+					echo '<tr class="firstLine">';
 						echo '<th scope="col">Lieu</th>';
 						echo '<th scope="col">Capteur</th>';
 						echo '<th scope="col">Tot. heure</th>';

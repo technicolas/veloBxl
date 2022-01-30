@@ -35,14 +35,15 @@ th{
 	text-align: left;
 }
 
-.lignesDatas:hover{
-	background-color: #E2B10E;
-}
-
-.under{
+.firstLine{
 	text-decoration: underline #2487F7;
 	font-size: 18px;
 	background-color: yellow;
+}
+
+.lignesDatas:hover{
+	background-color: #E2B10E;
+	font-size: 22px;
 }
 
 .grandTotal{
@@ -52,6 +53,10 @@ th{
 	font-weight: bold;
 	text-align: right;
 	padding: 1% 2%;
+}
+
+.grandTotal:hover{
+    color: red;
 }
 
 .date{
