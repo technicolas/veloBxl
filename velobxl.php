@@ -47,7 +47,7 @@
 					echo "<td>"; echo ($capteur[$i]->{'properties'}->{"hour_cnt"}); echo "</td>";
 					echo "<td>"; echo ($capteur[$i]->{'properties'}->{"day_cnt"}); echo "</td>";
 					echo "<td>"; echo ($capteur[$i]->{'properties'}->{"year_cnt"}); echo "</td>";
-					$nbrBikesYearTot = $nbrBikesYearTot + ($capteur[$i]->{'properties'}->{"year_cnt"});
+					$nbrBikesYearTot += ($capteur[$i]->{'properties'}->{"year_cnt"});
 				echo '</tr>';
 			}
 			echo '</table>';

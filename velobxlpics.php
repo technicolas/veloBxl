@@ -47,7 +47,7 @@
 					echo "<td>"; echo ($capteur[$i]->{'properties'}->{"hour_cnt"}); echo "</td>";
 					echo "<td>"; echo ($capteur[$i]->{'properties'}->{"day_cnt"}); echo "</td>";
 					echo "<td>"; echo ($capteur[$i]->{'properties'}->{"year_cnt"}); echo "</td>";
-					$nbrBikesYearTot = $nbrBikesYearTot + ($capteur[$i]->{'properties'}->{"year_cnt"});
+					$nbrBikesYearTot += ($capteur[$i]->{'properties'}->{"year_cnt"});
 					echo "<td class=\"images\"><img src=\""; echo ($capteur[$i]->{'properties'}->{"pic_a"}); echo "\" height=\"150\" alt=\"---\"/></td>";
 					echo "<td class=\"images\"><img src=\""; echo ($capteur[$i]->{'properties'}->{"pic_b"}); echo "\" height=\"150\" alt=\"---\"/></td>";
 				echo '</tr>';
