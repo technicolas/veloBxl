@@ -54,7 +54,5 @@
 			echo "<p class=\"grandTotal\">Grand total annuel: $nbrBikesYearTot";
 		?>
 	</body>
-	
 	<footer>&copy Nicolas - <?php echo date("Y"); ?> </footer>
-	
 </html>
