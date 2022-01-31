@@ -1,2 +1,2 @@
 # veloBxl
-Comptage des cyclistes à différents points de Bruxelles
+Comptage des cyclistes à différents lieux de Bruxelles.
