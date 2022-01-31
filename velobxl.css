@@ -1,5 +1,6 @@
 body{
 	font: 15px Courier, sans-serif;
+	background-color: rgb(230, 238, 237);
 }
 
 p{
@@ -55,9 +56,9 @@ th{
 	padding: 1% 2%;
 }
 
-/*.grandTotal:hover{
-    color: red;
-}*/
+.grandTotal:hover{
+    color: blue;
+}
 
 .date{
 	text-decoration: blink;
