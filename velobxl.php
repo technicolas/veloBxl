@@ -39,7 +39,7 @@
 
 			// Affichage des autres lignes du tableau et des données provenant des différentes capteurs:
 			// -----------------------------------------------------------------------------------------
-			$nbrBikesYearTot = 0;		// Variable utilisée pour le stockage du nombre d'utilisateurs annuel
+			$nbrBikesHourTot = $nbrBikesDayTot = $nbrBikesYearTot = 0;		// Variables utilisées pour le stockage du nombre d'utilisateurs annuel
 			for ($i = 0; $i < 17; $i++) {
 				echo '<tr class="lignesDatas">';
 					echo "<th scope=\"row\">"; echo ($capteur[$i]->{'properties'}->{"road_fr"}); echo "</th>";
@@ -47,11 +47,14 @@
 					echo "<td>"; echo ($capteur[$i]->{'properties'}->{"hour_cnt"}); echo "</td>";
 					echo "<td>"; echo ($capteur[$i]->{'properties'}->{"day_cnt"}); echo "</td>";
 					echo "<td>"; echo ($capteur[$i]->{'properties'}->{"year_cnt"}); echo "</td>";
+					$nbrBikesHourTot += ($capteur[$i]->{'properties'}->{"hour_cnt"});
+					$nbrBikesDayTot += ($capteur[$i]->{'properties'}->{"day_cnt"});
 					$nbrBikesYearTot += ($capteur[$i]->{'properties'}->{"year_cnt"});
 				echo '</tr>';
 			}
 			echo '</table>';
-			echo "<p class=\"grandTotal\">Grand total annuel: $nbrBikesYearTot";
+			
+			echo "<p class=\"grandTotal\">Totaux: Heure en cours: $nbrBikesHourTot | Jour: $nbrBikesDayTot | Année: $nbrBikesYearTot";
 		?>
 	</body>
 	<footer>&copy Nicolas - <?php echo date("Y"); ?> </footer>

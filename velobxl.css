@@ -55,9 +55,9 @@ th{
 	padding: 1% 2%;
 }
 
-.grandTotal:hover{
+/*.grandTotal:hover{
     color: red;
-}
+}*/
 
 .date{
 	text-decoration: blink;
