@@ -8,6 +8,11 @@
 		<a href="<?php $_SERVER['PHP_SELF']; ?>">Actualiser la page</a>
 		
 		<?php
+			// Récupération du nombre de capteurs disponibles pour le moment sur le réseau:
+			// ----------------------------------------------------------------------------
+			$json = file_get_contents("https://data.mobility.brussels/geoserver/bm_bike/wfs?service=wfs&version=1.1.0&request=GetFeature&typeName=bm_bike:rt_counting&outputFormat=json&srsName=EPSG:4326");
+			$parsed_json = json_decode($json);
+			$nbCapteurs = $parsed_json->{"totalFeatures"};
 
 			// Récupération de la date et de l'heure via le capteur CAT17:
 			// -----------------------------------------------------------
@@ -40,7 +45,7 @@
 			$capteur = $parsed_json->{"features"};
 
 			$nbrBikesHourTot = $nbrBikesDayTot = $nbrBikesYearTot = 0;		// Variables utilisées pour le stockage du nombre d'utilisateurs annuel
-			for ($i = 0; $i < 17; $i++) {
+			for ($i = 0; $i < $nbCapteurs; $i++) {
 				echo '<tr class="lignesDatas">';
 					echo "<th scope=\"row\">"; echo ($capteur[$i]->{'properties'}->{"road_fr"}); echo "</th>";
 					echo "<td>"; echo ($capteur[$i]->{'properties'}->{"device_name"}); echo "</td>";
