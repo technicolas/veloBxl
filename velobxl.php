@@ -43,8 +43,8 @@
 			$parsed_json = json_decode($json);
 			$capteur = $parsed_json->{"features"};
 
-			// Affichage des autres lignes du tableau et des données provenant des différentes capteurs:
-			// -----------------------------------------------------------------------------------------
+			// Affichage des autres lignes du tableau et des données provenant des différents capteurs:
+			// ----------------------------------------------------------------------------------------
 			$nbrBikesHourTot = $nbrBikesDayTot = $nbrBikesYearTot = 0;		// Variables utilisées pour le stockage du nombre d'utilisateurs annuel
 			for ($i = 0; $i < $nbCapteurs; $i++) {
 				echo '<tr class="lignesDatas">';
