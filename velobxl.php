@@ -60,7 +60,7 @@
 			}
 			echo '</table>';
 			
-			echo "<p class=\"grandTotal\">Totaux: Heure en cours: $nbrBikesHourTot | Jour: $nbrBikesDayTot | Année: $nbrBikesYearTot";
+			echo "<p class=\"grandTotal\">Totaux: $nbCapteurs capteurs | Heure en cours: $nbrBikesHourTot | Jour: $nbrBikesDayTot | Année: $nbrBikesYearTot";
 		?>
 	</body>
 	<footer>&copy Nicolas - <?php echo date("Y"); ?> </footer>
